@@ -1,5 +1,5 @@
 {
-  description = "My Lean package";
+  description = "Exercises";
 
   inputs.lean.url = github:leanprover/lean4;
   inputs.flake-utils.url = github:numtide/flake-utils;
@@ -8,7 +8,7 @@
     let
       leanPkgs = lean.packages.${system};
       pkg = leanPkgs.buildLeanPackage {
-        name = "MyPackage";  # must match the name of the top-level .lean file
+        name = "Exercises";  # must match the name of the top-level .lean file
         src = ./.;
       };
     in {
